@@ -1,0 +1,41 @@
+.post-header{
+    background-color: #f7f7f7;
+    border-bottom: 2px solid #f4f4f9;
+
+    .post-header__image{
+        img{width: 100%;}
+    }
+    
+    .post-header__content{
+        .post-meta {
+            margin-bottom: 3rem;
+            .post-date{margin-bottom: 1rem;}
+            .post-tags {
+                margin-top: 1rem;
+                .tags{
+                    font-size: 13px;
+                    text-transform: uppercase;
+                    padding: .5rem 1rem;
+                    font-weight: 600;
+                    border-radius: 2px;
+                    margin-right: .5rem;
+                    color: #FFF;
+                    background-color: #212631;
+                    -webkit-transition: 0.2s opacity;
+                    transition: 0.2s opacity;
+                }
+            }
+        }
+        
+        h1{margin-bottom: 2rem;}
+    }
+}
+
+.post-body{
+    margin-top: 2rem;
+
+    .post-body__image{
+        display: flex;
+        justify-content: center;
+    }
+}
