@@ -2,7 +2,7 @@ import React from "react"
 import Filter from "../Components/Filter"
 import Layout from "../Components/Layout"
 
-const SearchPage = () => (
+const FilterPage = () => (
     <Layout>
         <div>
         <Filter />
@@ -10,4 +10,4 @@ const SearchPage = () => (
     </Layout>
 )
 
-export default SearchPage
+export default FilterPage
