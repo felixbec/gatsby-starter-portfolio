@@ -1,10 +1,15 @@
 import React from "react"
 import Layout from "../Components/Layout"
+import Header from "../Components/Header"
+import Resume from "../Components/Resume"
+import Projects from "../Components/Projects"
 
 const App = () => {
     return (
         <Layout>
-            <h2>Homepage</h2>
+            <Header />
+            <Resume />
+            <Projects />
         </Layout>
     )
 }
