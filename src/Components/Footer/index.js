@@ -21,60 +21,32 @@ const Footer = (props) => {
     let getDate = new Date();
     let getCurrentYear = getDate.getFullYear();
     return (
-        
-        <StyledFooter className="container">
-            <div className="footer-topbar row">
-                <div className="footer-topbar__col--left col-md-6 row">
-                    <div className="col-md-6 left">
+        <StyledFooter>
+            <div className="">
+                <div className="footer-topbar row">
+                    <div className="footer-topbar__col--left col-md-6 row">
+
+                    </div>
+
+                    <div className="footer-topbar__col--right col-md-6">
                         <ul>
-                            <li>
+                            <li className="footer-topbar__item">
                                 <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                                     <span className="col__social__icon"><FontAwesomeIcon icon={faFacebookF} color="#A7BFD3" /></span>
-                                    <span className="col__social__username">/cfbeltranIT</span>
                                 </a>
                             </li>
-                            <li>
+                            <li className="footer-topbar__item">
                                 <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
                                     <span className="col__social__icon"><FontAwesomeIcon icon={faTwitter}  color="#A7BFD3"/></span>
-                                    <span className="col__social__username">@cfbeltranIT</span>
                                 </a>
                             </li>
-                            <li>
+                            <li className="footer-topbar__item">
                                 <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                                     <span className="col__social__icon"><FontAwesomeIcon icon={faInstagram} color="#A7BFD3"/></span>
-                                    <span className="col__social__username">@cfbeltranIT</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
-
-                    <div className="col-md-6 right">
-                        <ul>
-                            <li>
-                                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                                    <span className="col__social__icon"><FontAwesomeIcon icon={faFacebookF} color="#A7BFD3" /></span>
-                                    <span className="col__social__username">/cfbeltranIT</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
-                                    <span className="col__social__icon"><FontAwesomeIcon icon={faTwitter}  color="#A7BFD3"/></span>
-                                    <span className="col__social__username">@cfbeltranIT</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                                    <span className="col__social__icon"><FontAwesomeIcon icon={faInstagram} color="#A7BFD3"/></span>
-                                    <span className="col__social__username">@cfbeltranIT</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="footer-topbar__col--right col-md-6">
-                    <h3>Start a project?</h3>
-                    <span>cfbeltranIT@gmail.com</span>
                 </div>
             </div>
 
