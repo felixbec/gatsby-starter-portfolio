@@ -7,8 +7,9 @@ import { Helmet } from "react-helmet"
 //import Toggle from "../Toggle"
 import NavBar from "../NavBar"
 import Footer from "../Footer"
+import Contact from "../Contact"
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './styles.scss'
+
 
 
 function Layout({ children }) {
@@ -34,6 +35,8 @@ function Layout({ children }) {
                     <main>
                         {children}
                     </main>
+                    
+                    <Contact />
                     <Footer />
                 </>
             </ThemeProvider>
