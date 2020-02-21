@@ -3,8 +3,11 @@ import styled from 'styled-components';
 const StyledContainer = styled.div`
     margin-top: 3rem;
     
-    .row{
+    .card-deck{
         margin:5rem 0;
+        .card{
+            padding: 0 1rem;
+        }
         .even{
             margin-top: 3rem;
         }
