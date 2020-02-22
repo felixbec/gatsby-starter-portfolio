@@ -14,6 +14,9 @@ const StyledImage = styled.img`
 
 `
 const StyledAuthorInfo = styled.div`
+    h1{
+        font-size: 80px;
+    }
     span{
         margin-top: 1rem;
     }
