@@ -1,8 +1,7 @@
 import React from "react"
-import { Link, graphql, useStaticQuery  } from "gatsby"
+import { graphql, useStaticQuery  } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF, faTwitter, faInstagram, faPinterest } from "@fortawesome/free-brands-svg-icons"
-import {faPaperPlane} from "@fortawesome/free-solid-svg-icons"
+import { faFacebookF, faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { StyledContact} from './Contact.styled';
 
 const Contact = (props) => {
@@ -18,10 +17,7 @@ const Contact = (props) => {
         `
     )
 
-    let getDate = new Date();
-    let getCurrentYear = getDate.getFullYear();
     return (
-        
         <StyledContact className="container">
             <div className="contact-topbar row">
                 <div className="contact-topbar__col--left col-md-6 row">
@@ -73,8 +69,10 @@ const Contact = (props) => {
                 </div>
 
                 <div className="contact-topbar__col--right col-md-6">
-                    <h3>Start a project?</h3>
-                    <span>cfbeltranIT@gmail.com</span>
+                    <div>
+                        <h3>Start a project?</h3>
+                        <span>cfbeltranIT@gmail.com</span>
+                    </div>
                 </div>
             </div>
         </StyledContact>
