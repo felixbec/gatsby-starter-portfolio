@@ -6,6 +6,7 @@ import { CodeBlock, atomOneDark } from 'react-code-blocks'
 
 
 const Header = () => {
+    {/*
     const data = useStaticQuery(
         graphql`
             query {
@@ -21,6 +22,7 @@ const Header = () => {
             }
         `
     )
+    */}
     return (
         <Fragment>
             <StyledContainer className="container">

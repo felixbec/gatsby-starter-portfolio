@@ -4,6 +4,7 @@ import { bool } from 'prop-types';
 import { StyledMenu } from './Menu.styled';
 
 const Menu = ({ open }) => {
+    {/*
     const data = useStaticQuery(
         graphql`
             query {
@@ -18,7 +19,7 @@ const Menu = ({ open }) => {
                 }
             }
         `
-    )
+        )*/}
 
     return (
         <StyledMenu open={open}>

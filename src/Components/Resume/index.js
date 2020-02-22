@@ -5,6 +5,7 @@ import Fade from 'react-reveal/Fade';
 
 
 const Project = () => {
+    {/*
     const data = useStaticQuery(
         graphql`
             query {
@@ -20,6 +21,7 @@ const Project = () => {
             }
         `
     )
+        */}
     return (
         <StyledContainer id="resume" className="container">
             <h1>#03;<br/>

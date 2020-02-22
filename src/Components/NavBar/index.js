@@ -6,6 +6,7 @@ import { StyledHeader, StyledLogo, StyledMenu, StyledBlock } from './NavBar.styl
 
 
 const Header = () => {
+    {/*
     const data = useStaticQuery(
         graphql`
             query {
@@ -20,7 +21,7 @@ const Header = () => {
                 }
             }
         `
-    )
+        )*/}
         {/*
             <nav>
                 <div className="navigation-topbar container-fluid">

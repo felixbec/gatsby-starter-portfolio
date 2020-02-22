@@ -5,10 +5,11 @@ import SEO from "../../Components/SEO"
 import "./styles.scss"
 
 export default ({ data }) => {
+    {/*
     const post = data.contentfulBlogPost;
     
     const tags = post.tags;
-    {/*
+    
     return (
         
         <Layout>
@@ -48,7 +49,8 @@ export default ({ data }) => {
     ) */}
 }
 
-export const query = graphql`
+{/*
+    export const query = graphql`
     query blogPostQuery($slug: String!) {
         contentfulBlogPost (slug: {eq: $slug}) {
             title
@@ -80,3 +82,4 @@ export const query = graphql`
         }
     }
 `
+*/}
