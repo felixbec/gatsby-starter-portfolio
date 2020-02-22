@@ -1,7 +1,7 @@
 import React, { Fragment }  from "react"
 import { Link, graphql, useStaticQuery  } from "gatsby"
 import Headroom from "react-headroom"
-import logo from "../../images/logo.svg"
+import logo from "../../images/navbar-logo.png"
 import { StyledHeader, StyledLogo, StyledMenu, StyledBlock } from './NavBar.styled';
 
 
@@ -49,13 +49,13 @@ const Header = () => {
         <Fragment>
             <Headroom>
                 <StyledHeader>
-                    <StyledLogo></StyledLogo>
+                    <StyledLogo><img src={logo} alt="Portfolio Logo" /></StyledLogo>
                     <StyledMenu>
-                        <Link to="/">About Me</Link>
-                        <Link to="/">About Me</Link>
-                        <Link to="/">About Me</Link>
-                        <Link to="/">About Me</Link>
-                        <Link to="/">About Me</Link>
+                        <Link to="#about">About Me</Link>
+                        <Link to="#resume">Resume</Link>
+                        <Link to="#projects">Projects</Link>
+                        <Link to="#blog">Blog</Link>
+                        <Link to="#contact">Contact Me</Link>
                     </StyledMenu>
                     <StyledBlock>
                         <Link to="/" className="btn">Get In Touch</Link>
