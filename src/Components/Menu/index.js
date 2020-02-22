@@ -22,12 +22,13 @@ const Menu = ({ open }) => {
 
     return (
         <StyledMenu open={open}>
-            
+            {/*
             {data.allContentfulPage.edges.map(({ node }) => {
                 return (
                     <Link className="list__link" key={node.slug} to={node.slug}>{node.pageTitle}</Link>
                 )
             })}
+            */}
             <Link className="list__link" to="/categories/">Categories</Link>
             <Link className="list__link" to="/tags/">Tags</Link>
         </StyledMenu>

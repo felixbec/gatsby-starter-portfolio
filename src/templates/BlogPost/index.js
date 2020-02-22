@@ -8,7 +8,9 @@ export default ({ data }) => {
     const post = data.contentfulBlogPost;
     
     const tags = post.tags;
+    {/*
     return (
+        
         <Layout>
             <SEO title={post.title} description={post.description.description} />
             <div className="post-header">
@@ -42,7 +44,8 @@ export default ({ data }) => {
                 </div>
             </div>
         </Layout>
-    )
+        
+    ) */}
 }
 
 export const query = graphql`
