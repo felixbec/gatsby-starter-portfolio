@@ -21,6 +21,11 @@ function Layout({ children }) {
         return <div />
     };
 
+    if (typeof window !== "undefined") {
+        // eslint-disable-next-line global-require
+        require("smooth-scroll")('a[href*="#"]')
+    }
+
     return (
         <div style={{overflowX: 'hidden'}}>
             <ThemeProvider theme={themeMode}>

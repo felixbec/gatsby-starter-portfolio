@@ -28,12 +28,15 @@ const StyledCard = styled.div`
     h3{
         padding-top: 1.5rem;
         color: ${({ theme }) => theme.textActive};
+        font-size: ${({ theme }) => theme.textXLarge};
     }
     p{
         color: ${({ theme }) => theme.accentText};
+        font-size: ${({ theme }) => theme.textMedium};
     }
     span{
         color: ${({ theme }) => theme.text};
+        font-size: ${({ theme }) => theme.textSmall};
     }
 `
 
