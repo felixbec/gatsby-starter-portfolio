@@ -14,6 +14,14 @@ const Footer = (props) => {
                         title
                     }
                 }
+                contentfulAbout {
+                    socialMedia {
+                        id
+                        name
+                        fontAwesomeIcon
+                        url
+                    }
+                }
             }
         `
     )
@@ -27,14 +35,21 @@ const Footer = (props) => {
                     <div className="footer-topbar__col--left col-md-6">
                         <img src={signature} alt="Signaure Logo" />
                     </div>
-
+                    
                     <div className="footer-topbar__col--right col-md-6">
                         <ul>
-                            <li className="footer-topbar__item">
-                                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                                    <span className="col__social__icon"><FontAwesomeIcon icon={faFacebookF} color="#858585" /></span>
-                                </a>
-                            </li>
+                        {/*
+                            {data.contentfulAbout.socialMedia.map(({ socialMedia }) => {
+                                return (
+                                    <li className="footer-topbar__item">
+                                        <a href={`${socialMedia.url}`} target="_blank" rel="noopener noreferrer">
+                                            <span className="col__social__icon"><i className={`${socialMedia.fontAwesomeIcon}`}></i></span>
+                                        </a>
+                                    </li>
+                                )
+                            })}
+                        */}
+
                             <li className="footer-topbar__item">
                                 <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
                                     <span className="col__social__icon"><FontAwesomeIcon icon={faTwitter}  color="#858585"/></span>

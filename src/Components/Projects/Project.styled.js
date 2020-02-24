@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import blockchain from "../../images/blockchain.png"
 
 const StyledContainer = styled.div`
     margin: 5rem 0;
@@ -14,7 +13,7 @@ const StyledProject = styled.div`
 `
 
 const StyledImage = styled.div`
-    background: ${({ theme }) => theme.bgGradient}, url(${blockchain});
+    background: ${({ theme }) => theme.bgGradient}, url(${props => props.background});
     height: 400px;
     background-size: contain;
 `

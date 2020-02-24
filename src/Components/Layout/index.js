@@ -33,14 +33,12 @@ function Layout({ children }) {
                     <GlobalStyles/>
                     <button  onClick={toggleTheme}>Toggle theme</button>
                     <Helmet>
-                        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css" />
-                        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css"/>
+                        <script src="https://kit.fontawesome.com/e58833834b.js" crossorigin="anonymous"></script>
                     </Helmet>
                     <NavBar />
                     <main>
                         {children}
                     </main>
-                    
                     <Contact />
                     <Footer />
                 </>

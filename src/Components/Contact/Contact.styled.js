@@ -10,6 +10,7 @@ const StyledContact = styled.footer`
     }
     
     .contact-topbar__col--left{
+        align-items: center;
         .right{
             display: flex;
             justify-content: flex-end;
@@ -42,14 +43,48 @@ const StyledContact = styled.footer`
         align-items: center;
         
         h3{color: ${({ theme }) => theme.textActive};}
-        span{color: #A7BFD3;}
+        form{
+            display: flex;
+            flex-direction:column;
+            label{
+                border: 0; 
+                clip: rect(0 0 0 0); 
+                height: 1px; 
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px;
+            }
+            input, textarea {
+                background:transparent;
+                margin: 5px 0;
+                border: 1px solid ${({ theme }) => theme.border};;
+                color: #A7BFD3;
+                min-width:300px;
+
+                &::placeholder {
+                    color: #A7BFD3;
+                    opacity: 1;
+                }
+            }
+            button{
+                background: #A7BFD3;
+                border-color: background: ${({ theme }) => theme.border};;
+                &:hover{
+                    background: ${({ theme }) => theme.textActive};
+                    border-color: ${({ theme }) => theme.textActive};
+                    color: ${({ theme }) => theme.text};
+                }
+            }
+        }
     }
 
     .contact-bottombar{
         display: flex;
         justify-content: space-between;
         margin: 1rem 0;
-        border-top: 1 solid #A7BFD3;
+        border-top: 1px solid #A7BFD3;
         .contact-bottombar__linkables{
             ul{
                 margin: 0;

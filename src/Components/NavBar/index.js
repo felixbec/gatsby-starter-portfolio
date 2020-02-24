@@ -1,28 +1,12 @@
 import React, { Fragment }  from "react"
-import { Link, graphql, useStaticQuery  } from "gatsby"
+import { Link } from "gatsby"
 import Headroom from "react-headroom"
 import logo from "../../images/navbar-logo.png"
 import { StyledHeader, StyledLogo, StyledMenu, StyledBlock } from './NavBar.styled';
 
 
-const Header = () => {
-    {/*
-    const data = useStaticQuery(
-        graphql`
-            query {
-                allContentfulCategoryPage {
-                    edges {
-                        node {
-                            slug
-                            id
-                            categoryName
-                        }
-                    }
-                }
-            }
-        `
-        )*/}
-        {/*
+const NavBar = () => {
+        {/*MIGHT USE FOR MOBILE NAVBAR
             <nav>
                 <div className="navigation-topbar container-fluid">
                     <div ref={node} className="navigation-topbar__left container">
@@ -52,11 +36,11 @@ const Header = () => {
                 <StyledHeader>
                     <StyledLogo><img src={logo} alt="Portfolio Logo" /></StyledLogo>
                     <StyledMenu>
-                        <Link to="#about">About Me</Link>
-                        <Link to="#resume">Resume</Link>
-                        <Link to="#projects">Projects</Link>
-                        <Link to="#blog">Blog</Link>
-                        <Link to="#contact">Contact Me</Link>
+                        <a href="#about">About Me</a>
+                        <a href="#resume">Resume</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#blog">Blog</a>
+                        <a href="#contact">Contact Me</a>
                     </StyledMenu>
                     <StyledBlock>
                         <Link to="/" className="btn">Get In Touch</Link>
@@ -67,5 +51,4 @@ const Header = () => {
     )
 }
 
-
-export default Header
+export default NavBar

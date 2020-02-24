@@ -4,53 +4,44 @@ import { StyledContainer, StyledCard } from './Resume.styled';
 import Fade from 'react-reveal/Fade';
 
 
-const Project = () => {
-    {/*
+const Resume = (props) => {
     const data = useStaticQuery(
         graphql`
             query {
-                allContentfulCategoryPage {
+                allContentfulExperience(limit: 4) {
                     edges {
                         node {
-                            slug
                             id
-                            categoryName
+                            jobTitle
+                            year
+                            jobShortDescription {
+                                childMarkdownRemark {
+                                    excerpt
+                                }
+                            }
                         }
                     }
+                }
+                contentfulAbout {
+                    yearsOfExperience
                 }
             }
         `
     )
-        */}
     return (
         <StyledContainer id="resume" className="container">
-            <h1>#03;<br/>
-            Years</h1>
+            <h1>#{data.contentfulAbout.yearsOfExperience};<br/>Years</h1>
             <Fade bottom>
                 <div className="card-deck">
-                    <StyledCard className="card">
-                        <h3>Test</h3>
-                        <p>Front End Developer</p>
-                        <span>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
-                    </StyledCard>
-
-                    <StyledCard className="even card">
-                        <h3>Test</h3>
-                        <p>Front End Developer</p>
-                        <span>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
-                    </StyledCard>
-
-                    <StyledCard className="card">
-                        <h3>Test</h3>
-                        <p>Front End Developer</p>
-                        <span>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
-                    </StyledCard>
-
-                    <StyledCard className="card even">
-                        <h3>Test</h3>
-                        <p>Front End Developer</p>
-                        <span>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
-                    </StyledCard>
+                    {data.allContentfulExperience.edges.map(({ node }) => {
+                        return (
+                            <StyledCard className="card" key={node.id}>
+                                <h3>{node.year}</h3>
+                                <p>{node.jobTitle}</p>
+                                <span>{node.jobShortDescription.childMarkdownRemark.excerpt}</span>
+                            </StyledCard>
+                        )
+                    })}
                 </div>
             </Fade>
 
@@ -59,4 +50,4 @@ const Project = () => {
     )
 }
 
-export default Project
+export default Resume

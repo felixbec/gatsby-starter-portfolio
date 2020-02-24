@@ -1,137 +1,52 @@
 import React, { Fragment }  from "react"
 import { graphql, useStaticQuery  } from "gatsby"
-import { StyledContainer, StyledImage, StyledAuthorInfo, StyledCodeBlock } from './Header.styled';
-import AuthorImage from "../../images/portfolio-carlos.png"
+import { StyledContainer, StyledImage, StyledAuthorInfo } from './Header.styled';
 import { CodeBlock, atomOneDark } from 'react-code-blocks'
 
 
-const Header = () => {
-    {/*
+const Header = (props) => {
+    
     const data = useStaticQuery(
         graphql`
             query {
-                allContentfulCategoryPage {
-                    edges {
-                        node {
-                            slug
-                            id
-                            categoryName
+                contentfulAbout {
+                    name
+                    profile {
+                        fluid {
+                            src
+                        }
+                    }
+                    aboutMe {
+                        childMarkdownRemark {
+                            html
                         }
                     }
                 }
             }
         `
     )
-    */}
+
+    const {name, profile, aboutMe} = data.contentfulAbout;
+    
     return (
         <Fragment>
             <StyledContainer className="container">
                 <div className="col-md-6">
-                    <StyledImage src={AuthorImage} />
+                    <StyledImage src={profile.fluid.src} />
                 </div>
                 
                 <StyledAuthorInfo className="col-md-6">
                     <h1>HELLO</h1>
-                    <h2>I'm Carlos</h2>
+                    <h2>I'm {name}</h2>
+                    <CodeBlock
+                    text={`${aboutMe.childMarkdownRemark.html}`}
+                    language="html"
+                    theme={atomOneDark}
+                    showLineNumbers = {false}
+                    wrapLines={false}
+                    codeBlock
+                    />
 
-<CodeBlock
-text={`<!--Code Block -->
-<div class="col-md-6 codeblock">
-    <h1 class="codeblock__heading">HELLO</h1>
-    <p class="codeblock__paragraph">I'm Carlos</h2>
-</div>`}
-language="html"
-theme={atomOneDark}
-showLineNumbers = {false}
-wrapLines={true}
-codeBlock
-/>
-<StyledCodeBlock
-text={`<!--Code Block -->
-<div class="col-md-6 codeblock">
-    <h1 class="codeblock__heading">HELLO</h1>
-    <p class="codeblock__paragraph">I'm Carlos</h2>
-</div>`}
-language="html"
-theme={atomOneDark}
-showLineNumbers = {false}
-wrapLines={true}
-codeBlock
-/>
-
-<CodeBlock
-text={`<!--Code Block -->
-<div class="col-md-6 codeblock">
-    <h1 class="codeblock__heading">HELLO</h1>
-    <p class="codeblock__paragraph">I'm Carlos</h2>
-</div>`}
-language="html"
-theme={atomOneDark}
-showLineNumbers = {false}
-wrapLines={true}
-codeBlock
-/>
-<StyledCodeBlock
-text={`<!--Code Block -->
-<div class="col-md-6 codeblock">
-    <h1 class="codeblock__heading">HELLO</h1>
-    <p class="codeblock__paragraph">I'm Carlos</h2>
-</div>`}
-language="html"
-theme={atomOneDark}
-showLineNumbers = {false}
-wrapLines={true}
-codeBlock
-/>
-
-<CodeBlock
-text={`<!--Code Block -->
-<div class="col-md-6 codeblock">
-    <h1 class="codeblock__heading">HELLO</h1>
-    <p class="codeblock__paragraph">I'm Carlos</h2>
-</div>`}
-language="html"
-theme={atomOneDark}
-showLineNumbers = {false}
-wrapLines={true}
-codeBlock
-/>
-<StyledCodeBlock
-text={`<!--Code Block -->
-<div class="col-md-6 codeblock">
-    <h1 class="codeblock__heading">HELLO</h1>
-    <p class="codeblock__paragraph">I'm Carlos</h2>
-</div>`}
-language="html"
-theme={atomOneDark}
-showLineNumbers = {false}
-wrapLines={true}
-codeBlock
-/>
-<CodeBlock
-text={`<!--Code Block -->
-<div class="col-md-6 codeblock">
-    <h1 class="codeblock__heading">HELLO</h1>
-    <p class="codeblock__paragraph">I'm Carlos</h2>
-</div>`}
-language="html"
-theme={atomOneDark}
-showLineNumbers = {false}
-wrapLines={true}
-codeBlock
-/>
-<StyledCodeBlock
-text={`<!--Code Block -->
-<div class="col-md-6 codeblock">
-    <h1 class="codeblock__heading">HELLO</h1>
-    <p class="codeblock__paragraph">I'm Carlos</h2>
-</div>`}
-language="html"
-theme={atomOneDark}
-showLineNumbers = {false}
-wrapLines={true}
-codeBlock
-/>
                 </StyledAuthorInfo>
             </StyledContainer>
         </Fragment>
