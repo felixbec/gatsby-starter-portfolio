@@ -58,8 +58,9 @@ const StyledContact = styled.footer`
             }
             input, textarea {
                 background:transparent;
-                margin: 5px 0;
-                border: 1px solid ${({ theme }) => theme.border};;
+                margin: 10px 0;
+                border:none;
+                border-bottom: 1px solid ${({ theme }) => theme.border};
                 color: #A7BFD3;
                 min-width:300px;
 
@@ -69,8 +70,11 @@ const StyledContact = styled.footer`
                 }
             }
             button{
-                background: #A7BFD3;
-                border-color: background: ${({ theme }) => theme.border};;
+                background: transparent;
+                color: #A7BFD3;
+                border-color: ${({ theme }) => theme.border};
+                border-radius: 50px;
+                margin-top:10px;
                 &:hover{
                     background: ${({ theme }) => theme.textActive};
                     border-color: ${({ theme }) => theme.textActive};
