@@ -5,15 +5,12 @@ import SEO from "../../Components/SEO"
 import "./styles.scss"
 
 export default ({ data }) => {
-    {/*
     const post = data.contentfulBlogPost;
-    
-    const tags = post.tags;
     
     return (
         
         <Layout>
-            <SEO title={post.title} description={post.description.description} />
+            <SEO title={post.title} />
             <div className="post-header">
                 <div className="post-header__image">
                     <img src={post.headerImage.fluid.src} alt="Header" />
@@ -26,11 +23,6 @@ export default ({ data }) => {
                                 <h1>{post.title}</h1>
                                 <div className="post-meta">
                                     <span className="post-date">{post.publishDate}</span>
-                                    <div className="post-tags">
-                                        {tags.map((item , index) => (
-                                            <Link className="tags" to={`/tags/${item.toLowerCase()}/`} key={index}>{item}</Link>
-                                        ))}
-                                </div>
                                 </div>
                             </div>
                         </div>
@@ -39,42 +31,26 @@ export default ({ data }) => {
             </div>
 
             <div className="container post-body">
-                <div dangerouslySetInnerHTML={{ __html: post.body.childMarkdownRemark.html }} />
-                <div className="post-body__image">
-                    <img src={post.heroImage.fluid.src} alt={post.heroImage.description}/>
-                </div>
+                <div dangerouslySetInnerHTML={{ __html: post.excerpt.childMarkdownRemark.html }} />
             </div>
         </Layout>
         
-    ) */}
+    ) 
 }
 
-{/*
+
     export const query = graphql`
     query blogPostQuery($slug: String!) {
         contentfulBlogPost (slug: {eq: $slug}) {
             title
+            publishDate
             slug
-            tags
-            publishDate(formatString: "MMMM DD YYYY")
-            body {
+            excerpt {
                 childMarkdownRemark {
                     html
                 }
             }
-            description {
-                description
-            }
-            heroImage {
-                id
-                description
-                fluid {
-                    src
-                }
-            }
             headerImage {
-                id
-                description
                 fluid {
                     src
                 }
@@ -82,4 +58,3 @@ export default ({ data }) => {
         }
     }
 `
-*/}
