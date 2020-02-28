@@ -2,13 +2,13 @@ import React from "react"
 import { ThemeProvider } from 'styled-components'
 import {lightTheme, darkTheme } from '../../Theme'
 import { useDarkMode } from '../../useDarkMode';
-import { GlobalStyles } from '../../Global';
 import { Helmet } from "react-helmet"
 //import Toggle from "../Toggle"
 import NavBar from "../NavBar"
 import Footer from "../Footer"
 import Contact from "../Contact"
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { GlobalStyles } from '../../Global';
 
 
 
