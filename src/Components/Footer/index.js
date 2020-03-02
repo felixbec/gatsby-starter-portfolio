@@ -65,8 +65,8 @@ const Footer = (props) => {
                 </div>
             </div>
 
-            <div className="footer-bottombar container">
-                <div className="footer-bottombar__linkables">
+            <div className="footer-bottombar container row">
+                <div className="footer-bottombar__linkables col-lg-6">
                     <ul className="linkables__navigation-list">
                         <Link className="linkable first" to="/contact">Contact</Link>
                         <Link className="linkable" to="/filter">Filter</Link>
@@ -75,7 +75,7 @@ const Footer = (props) => {
                     </ul>
                 </div>
 
-                <div className="footer-bottombar__copyright">
+                <div className="footer-bottombar__copyright col-lg-6">
                     <span>&copy; {getCurrentYear} {data.site.siteMetadata.title}. All Rights Reserved.</span>
                 </div>
                 

@@ -10,10 +10,20 @@ const StyledContact = styled.footer`
     }
     
     .contact-topbar__col--left{
+        display: flex;
         align-items: center;
-        .right{
-            display: flex;
-            justify-content: flex-end;
+        @media (max-width: 992px){
+                justify-content: center;
+            }
+            @media (max-width: 768px){
+                padding-bottom: 2rem;
+            }
+        & > div{
+            columns: 2;
+            @media (max-width: 992px){
+                columns: unset;
+            }
+            
         }
         ul{
             margin:0;

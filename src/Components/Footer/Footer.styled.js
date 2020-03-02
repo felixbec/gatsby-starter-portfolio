@@ -46,7 +46,6 @@ const StyledFooter = styled.footer`
 
     .footer-bottombar{
         display: flex;
-        justify-content: space-between;
         margin: 2rem auto;
         padding:0;
         
@@ -63,10 +62,19 @@ const StyledFooter = styled.footer`
                     &.first{margin-left:0;}
                 }
             }
+            @media (max-width: 992px){
+                text-align: center;
+            }
         }
         .footer-bottombar__copyright{
+            text-align: right;
             font-size: ${({ theme }) => theme.textSmall};
             color: ${({ theme }) => theme.textDark};
+
+            @media (max-width: 992px){
+                text-align: center;
+                margin-top: 2rem;
+            }
         }
     }
 `
