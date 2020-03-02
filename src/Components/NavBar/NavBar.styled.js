@@ -19,7 +19,11 @@ const StyledLogo = styled.div`
 
 `
 const StyledMenu = styled.div`
-    display: flex;
+    display: none;
+    @media (min-width: ${({ theme }) => theme.desktop}) {
+        display: flex;
+        justify-content: center;
+    }
     align-items: center;
     a{
         padding: 1rem;
@@ -35,6 +39,10 @@ const StyledMenu = styled.div`
 const StyledBlock = styled.div`
     margin: auto 0;
     margin-right: 50px;
+    display: none;
+    @media (min-width: ${({ theme }) => theme.desktop}) {
+        display: block;
+    }
     a.btn{
         margin-top: 0;
         padding:.75rem 1.5rem;
@@ -52,9 +60,13 @@ const StyledBlock = styled.div`
         }
     }
 `
+const StyledHamburgerHolder = styled.div`
+    display: none;
+    align-items: center;
+    margin-right: 50px;
+    @media (max-width: ${({ theme }) => theme.desktop}) {
+        display: flex;
+    }
+`
 
-
-
-
-
-export {StyledHeader, StyledLogo, StyledMenu, StyledBlock};
+export {StyledHeader, StyledLogo, StyledMenu, StyledBlock, StyledHamburgerHolder};

@@ -4,38 +4,16 @@ import { bool } from 'prop-types';
 import { StyledMenu } from './Menu.styled';
 
 const Menu = ({ open }) => {
-    {/*
-    const data = useStaticQuery(
-        graphql`
-            query {
-                allContentfulPage {
-                    edges {
-                        node {
-                            slug
-                            id
-                            pageTitle
-                        }
-                    }
-                }
-            }
-        `
-        )*/}
-
+    
     return (
+        
         <StyledMenu open={open}>
-            {/*
-            {data.allContentfulPage.edges.map(({ node }) => {
-                return (
-                    <Link className="list__link" key={node.slug} to={node.slug}>{node.pageTitle}</Link>
-                )
-            })}
-            */}
-            <Link className="list__link" to="/categories/">Categories</Link>
-            <Link className="list__link" to="/tags/">Tags</Link>
-        </StyledMenu>
-
-        
-        
+            <a href="#about">About Me</a>
+            <a href="#resume">Resume</a>
+            <a href="#projects">Projects</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact Me</a>
+        </StyledMenu>  
     )
 }
 
