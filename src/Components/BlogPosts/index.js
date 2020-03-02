@@ -11,6 +11,7 @@ const BlogPosts = ( props ) => {
                 allContentfulBlogPost(sort: {fields: publishDate, order: DESC} limit: 3) {
                     edges {
                         node {
+                            id
                             title
                             slug
                             publishDate(formatString: "MMMM DD,YYYY")
@@ -27,20 +28,20 @@ const BlogPosts = ( props ) => {
     )
 
     return (
-        <StyledContainer>
-            <div className="container">
+        <StyledContainer id="blog" className="container">
+            <div>
                 <h1>#Recent Articles</h1>
                 <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                     <div className="row">
                         {data.allContentfulBlogPost.edges.map(({node}) => (
                             <Fade bottom key={node.id}>
-                                <div className="col-md-4 post">
+                                <div className="col-lg-4 col-md-6 post" >
                                     <StyledImage className="post-image" src={node.previewImage.fluid.src} alt={node.previewImage.description} height="268" width="100%" />
                                     <div className="post-meta" style={{margin:`15px 0`}}>
                                         <h4 className="post-title">{node.title}</h4>
                                         <span>{node.publishDate}</span>
                                     </div>
-                                    <Link className="post-slug" to={node.slug} style={{textDecoration:`none`}}>Read More <i class="fas fa-arrow-circle-right"></i></Link>
+                                    <Link className="post-slug" to={node.slug} style={{textDecoration:`none`}}>Read More <i className="fas fa-arrow-circle-right"></i></Link>
                                 </div>
                             </Fade>
                         ))} 

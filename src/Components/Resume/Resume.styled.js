@@ -5,12 +5,20 @@ const StyledContainer = styled.div`
     
     .card-deck{
         margin:5rem 0;
-        .card{
-            padding: 0 1rem;
+        .card-holder{
+            @media (max-width:1200px) and (min-width: 992px) {
+                &:last-child{
+                    display:none;
+                }
+            }
+            @media (min-width: 1200px) {
+                &:nth-child(2n){
+                    margin-top: 2rem;
+                }
+            }
+            .card{padding: 1.5rem 1rem; margin: 2rem 0;}
         }
-        .even{
-            margin-top: 3rem;
-        }
+        
     }
 
     .line{
@@ -21,12 +29,12 @@ const StyledContainer = styled.div`
 `
 
 const StyledCard = styled.div`
-    background: ${({ theme }) => theme.gradient};
-    border: 0!important;
+    /*background: ${({ theme }) => theme.gradient};*/
+    background: transparent!important;
+    border: 1px solid ${({ theme }) => theme.border}!important;
     border-radius: 0!important;
 
     h3{
-        padding-top: 1.5rem;
         color: ${({ theme }) => theme.textActive};
         font-size: ${({ theme }) => theme.textXLarge};
     }
