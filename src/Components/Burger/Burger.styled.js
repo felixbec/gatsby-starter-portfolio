@@ -3,8 +3,8 @@ export const StyledBurger = styled.button`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 1rem;
-    height: 1rem;
+    width: 2rem;
+    height: 2rem;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -17,9 +17,9 @@ export const StyledBurger = styled.button`
     }
 
     div {
-        width: 1rem;
+        width: 2rem;
         height: 3px;
-        background: ${({ theme, open }) => open ? theme.primaryDark : theme.primaryDark};
+        background: ${({ theme, open }) => open ? theme.text : theme.textActive};
         border-radius: 10px;
         transition: all 0.3s linear;
         position: relative;

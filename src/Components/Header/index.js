@@ -30,24 +30,18 @@ const Header = (props) => {
     
     return (
         <Fragment>
-            <StyledContainer className="container">
-                <div className="col-md-6">
-                    <StyledImage src={profile.fluid.src} />
+            <StyledContainer id="about" className="container">
+                <div className="row">
+                    <div className="col-md-6">
+                        <StyledImage src={profile.fluid.src} />
+                    </div>
+                    
+                    <StyledAuthorInfo className="col-md-6">
+                        <h1>HELLO</h1>
+                        <h2>I'm {name}</h2>
+                        <div dangerouslySetInnerHTML={{ __html: aboutMe.childMarkdownRemark.html }} />
+                    </StyledAuthorInfo>
                 </div>
-                
-                <StyledAuthorInfo className="col-md-6">
-                    <h1>HELLO</h1>
-                    <h2>I'm {name}</h2>
-                    <CodeBlock
-                    text={`${aboutMe.childMarkdownRemark.html}`}
-                    language="html"
-                    theme={atomOneDark}
-                    showLineNumbers = {false}
-                    wrapLines={false}
-                    codeBlock
-                    />
-
-                </StyledAuthorInfo>
             </StyledContainer>
         </Fragment>
     )

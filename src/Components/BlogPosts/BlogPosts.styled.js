@@ -8,6 +8,12 @@ const StyledContainer = styled.div`
         color: ${({ theme }) => theme.textActive};
     }
     .post{
+        @media (max-width:992px) and (min-width: 768px) {
+            &:last-child{
+                display:none;
+            }
+        }
+        
         display: flex;
         flex-direction: column;
         margin: 30px 0;

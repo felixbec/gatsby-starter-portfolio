@@ -22,6 +22,11 @@ export const lightTheme = {
     border: '#6B8096',
     gradient: 'linear-gradient(#39598A, #79D7ED)',
     bgGradient: 'linear-gradient(100deg, rgba(0,130,170,0) 0% ,rgba(255,255,255,1) 90%)',
+    bgGradientRight: 'linear-gradient(260deg, rgba(0,130,170,0) 0% ,rgba(255,255,255,1) 90%)',
+    mobile: '576px',
+    tablet: '768px',
+    desktop: '992px',
+    lgdesktop: '1200px'
 }
 
 export const darkTheme = {
@@ -38,4 +43,9 @@ export const darkTheme = {
     border: '#343749',
     gradient: 'linear-gradient(0deg, rgba(17,22,43,1) 15%, rgba(47,55,93,1) 50%);', 
     bgGradient: 'linear-gradient(100deg, rgba(0,130,170,0) 0% ,rgba(17,22,43,1) 90%)',
+    bgGradientRight: 'linear-gradient(260deg, rgba(0,130,170,0) 0% ,rgba(17,22,43,1) 90%)',
+    mobile: '576px',
+    tablet: '768px',
+    desktop: '992px',
+    lgdesktop: '1200px'
 }
