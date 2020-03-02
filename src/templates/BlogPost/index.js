@@ -11,7 +11,7 @@ export default ({ data }) => {
         
         <Layout>
             <SEO title={post.title} />
-            <div className="post-header">
+            <div className="post-header container">
                 <div className="post-header__image">
                     <img src={post.headerImage.fluid.src} alt="Header" />
                 </div>
@@ -30,6 +30,8 @@ export default ({ data }) => {
                 </div>
             </div>
 
+            <div className="line container"></div>
+
             <div className="container post-body">
                 <div dangerouslySetInnerHTML={{ __html: post.excerpt.childMarkdownRemark.html }} />
             </div>
@@ -43,7 +45,7 @@ export default ({ data }) => {
     query blogPostQuery($slug: String!) {
         contentfulBlogPost (slug: {eq: $slug}) {
             title
-            publishDate
+            publishDate(formatString: "MMMM DD YYYY")
             slug
             excerpt {
                 childMarkdownRemark {
