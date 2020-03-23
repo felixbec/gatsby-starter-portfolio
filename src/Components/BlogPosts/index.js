@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import {StyledContainer, StyledImage} from "./BlogPosts.styled"
 import Fade from 'react-reveal/Fade';
 
@@ -41,7 +41,7 @@ const BlogPosts = ( props ) => {
                                         <h4 className="post-title">{node.title}</h4>
                                         <span>{node.publishDate}</span>
                                     </div>
-                                    <Link className="post-slug" to={node.slug} style={{textDecoration:`none`}}>Read More <i className="fas fa-arrow-circle-right"></i></Link>
+                                    <a className="post-slug" target="_blank" rel="noopener noreferrer" href={node.slug} style={{textDecoration:`none`}}>Read More <i className="fas fa-arrow-circle-right"></i></a>
                                 </div>
                             </Fade>
                         ))} 
