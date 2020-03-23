@@ -1,7 +1,7 @@
 import React, { Fragment }  from "react"
 import { graphql, useStaticQuery  } from "gatsby"
 import { StyledContainer, StyledImage, StyledAuthorInfo } from './Header.styled';
-import { CodeBlock, atomOneDark } from 'react-code-blocks'
+
 
 
 const Header = (props) => {

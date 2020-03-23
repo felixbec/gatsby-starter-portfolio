@@ -1,7 +1,5 @@
 import React from "react"
 import { graphql, useStaticQuery  } from "gatsby"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF, faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { StyledContact} from './Contact.styled'
 
 const Contact = (props) => {

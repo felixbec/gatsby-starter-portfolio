@@ -48,24 +48,7 @@ const StyledFooter = styled.footer`
         display: flex;
         margin: 2rem auto;
         padding:0;
-        
-
-        .footer-bottombar__linkables{
-            ul{
-                margin: 0;
-                .linkable{
-                    color: ${({ theme }) => theme.textDark};
-                    margin: 0 1rem;
-                    text-transform: uppercase;
-                    text-decoration: none;
-                    font-size: ${({ theme }) => theme.textSmall};
-                    &.first{margin-left:0;}
-                }
-            }
-            @media (max-width: 992px){
-                text-align: center;
-            }
-        }
+        justify-content: flex-end;
         .footer-bottombar__copyright{
             text-align: right;
             font-size: ${({ theme }) => theme.textSmall};
