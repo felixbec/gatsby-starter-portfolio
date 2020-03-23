@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Popup from 'reactjs-popup';
 
 const StyledContainer = styled.div`
     margin: 5rem 0;
@@ -61,7 +62,6 @@ const StyledContent = styled.div`
     }
 
     div{
-        height: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -70,8 +70,12 @@ const StyledContent = styled.div`
                 height: auto;
             }
     }
+    div.popup-overlay{
+        height: auto;
+    }
     .information{
         margin-left:-50%;
+        height: 50%;
         @media (max-width: 768px) {
                 margin-left: 0;
             }
@@ -86,11 +90,13 @@ const StyledContentAlt = styled(StyledContent)`
         margin-left: 0;
         margin-right: -50%;
         z-index:1;
+        height: 50%;
+        align-items: flex-end;
         @media (max-width: 768px) {
             margin: 0;
         }
     }
-    div{
+    .linkable{
         align-items: flex-end;
     }
 
@@ -113,5 +119,81 @@ const StyledLinkable = styled.a`
             }
     }
 `
+const StyledPopup = styled(Popup)`
+    /* use your custom style for ".popup-overlay"
+    &-overlay {
+    background-color: red;
+    }*/
+    /* use your custom style for ".popup-content"*/
 
-export {StyledContainer, StyledProject, StyledImage, StyledImageAlt, StyledContent, StyledContentAlt, StyledLinkable};
+    &-content {
+        @media (max-width: 992px){
+            width: 75%!important;
+        }
+        @media (max-width: 768px){
+            width: 100%!important;
+            height: 100%!important;
+        }
+
+        .modal__holder{
+            .close{
+                text-align: right;
+                color: ${({ theme }) => theme.textActive};
+            }
+        
+            .modal__content{
+                padding: 1rem;
+                h2{
+                color: ${({ theme }) => theme.textDisable};
+                }
+                span{
+                    color: ${({ theme }) => theme.textDark};
+                }
+                hr{
+                    background: ${({ theme }) => theme.textActive};
+                }
+                p{
+                    font-size: ${({ theme }) => theme.textMedium};
+                    color: ${({ theme }) => theme.textDark};
+                }
+                .modal__content__links{
+                    flex-direction: row;
+                    justify-content:space-between;
+
+                    a.btn{
+                        background: ${({ theme }) => theme.textActive};
+                        svg{
+                            padding-right: 5px;
+                        }
+                    }
+                }
+            }
+            .modal__carousel{
+                .modal__carousel__links{
+                    flex-direction: row;
+                    justify-content: space-between;
+                    position: relative;
+                    bottom: 50%;
+
+                    button{
+                        background: transparent;
+                        border: none;
+                    }
+                }
+                .carousel__dot-group{
+                    flex-direction:row;
+                    .carousel__dot{
+                        margin: 0 5px;
+                    }
+                    .carousel__dot--selected{
+                        background: ${({ theme }) => theme.textActive};
+                    }
+                }
+            }
+        }
+    }
+    
+`
+
+
+export {StyledContainer, StyledProject, StyledImage, StyledImageAlt, StyledContent, StyledContentAlt, StyledLinkable, StyledPopup};
