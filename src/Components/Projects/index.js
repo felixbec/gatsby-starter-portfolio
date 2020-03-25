@@ -4,7 +4,7 @@ import { StyledContainer, StyledProject, StyledImage, StyledImageAlt, StyledCont
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faArrowAltCircleRight, faArrowAltCircleLeft, faExternalLinkSquareAlt } from "@fortawesome/free-solid-svg-icons"
-import Fade from 'react-reveal/Fade';
+import SlideAnimation from 'react-reveal/Slide';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, DotGroup } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
@@ -24,9 +24,7 @@ const Modal = (props) => {
         >
         {close => (
             <div className="modal__holder">
-            <div>
                 <button className="close" onClick={close}>&times;</button>
-                </div>
                 <div className="modal__content">
                     
                     <h2>{props.name}</h2>
@@ -97,12 +95,12 @@ const Projects = (props) => {
         <StyledContainer id="projects" className="container">
             <h1>#Lastest Work</h1>
             <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <SlideAnimation bottom>
             {data.allContentfulProject.edges.map(({ node }) => {
                 counter++;
                 if(counter%2 === 0){
                     return (
-                        <Fade left key={node.id}>
-                            <div className="project-holder">
+                        <div className="project-holder">
                             <StyledProject className="row">
                                 <StyledImage background={`${node.logo.fluid.src}`} className="col-md-8" />
                                 <StyledContent className="col-md-4">
@@ -114,17 +112,15 @@ const Projects = (props) => {
                                         <Modal name={node.name} type={node.type} description={node.description} link={node.slug} git={node.repositoryUrl} images={node.logo.fluid.src} />
                                     </div>
                                     {/*{node.slideshow.map((value, index ) => {
-                                       return <img src={value.fluid.src} alt="map" />
+                                        return <img src={value.fluid.src} alt="map" />
                                     })}*/}
                                 </StyledContent>
                             </StyledProject>
-                            </div>
-                        </Fade>
+                        </div>
                     )
                 } else {
                     return(
-                        <Fade right key={node.id}>
-                            <div className="project-holder">
+                        <div className="project-holder">
                             <StyledProject className="row">
                                 <StyledImageAlt background={`${node.logo.fluid.src}`} className="col-md-8" />
                                 <StyledContentAlt className="col-md-4">
@@ -138,11 +134,11 @@ const Projects = (props) => {
                                 </StyledContentAlt>
                                 
                             </StyledProject>
-                            </div>
-                        </Fade>
+                        </div>
                     )
                 }
             })}
+            </SlideAnimation>
         </StyledContainer>
     )
 }
