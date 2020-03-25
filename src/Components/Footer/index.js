@@ -1,7 +1,7 @@
 import React from "react"
-import { Link, graphql, useStaticQuery  } from "gatsby"
+import { graphql, useStaticQuery  } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF, faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons"
+import { faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { StyledFooter} from './Footer.styled';
 import signature from '../../images/sign.png';
 
