@@ -30,11 +30,14 @@ const NavBar = () => {
                         <a href="#resume">Resume</a>
                         <a href="#projects">Projects</a>
                         <a href="#blog">Blog</a>
+                        <a href="#contact">Contact Me</a>
                     </StyledMenu>
 
+                    {/* TODO - Replace with DarkMode Toggle
                     <StyledBlock>
                         <Link to="/" className="btn">Get In Touch</Link>
                     </StyledBlock>
+                    */}
 
                     <StyledHamburgerHolder ref={node}>
                         <Burger open={open} setOpen={setOpen} />

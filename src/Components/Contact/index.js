@@ -29,7 +29,7 @@ const Contact = (props) => {
     )
 
     return (
-        <StyledContact className="container">
+        <StyledContact id="contact" className="container">
             <div className="contact-topbar row">
                 <div className="contact-topbar__col--left col-md-6">
                     <div>
