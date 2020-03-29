@@ -1,11 +1,20 @@
 import styled from 'styled-components';
 
+const StyledContainer = styled.div`
+    border-bottom: .5px solid ${({ theme }) => theme.border};
+    /*background: ${({ theme }) => theme.angleBG};*/
+    .headroom--pinned {
+        /*background: ${({ theme }) => theme.angleBG};*/
+        background: ${({ theme }) => theme.body};
+        border-bottom: .5px solid ${({ theme }) => theme.border};
+    }
+`
+
 const StyledHeader = styled.header`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: .5px solid ${({ theme }) => theme.border};
-    background: ${({ theme }) => theme.body};
+    background: transparent;
     font-size: 16px;
     font-weight: 600;
     height: 80px;
@@ -14,7 +23,6 @@ const StyledHeader = styled.header`
 const StyledLogo = styled.div`
     display: flex;
     align-items: center;
-    margin-left: 50px;
     img{height: 30px; margin: 0;}
 
 `
@@ -69,4 +77,4 @@ const StyledHamburgerHolder = styled.div`
     }
 `
 
-export {StyledHeader, StyledLogo, StyledMenu, StyledBlock, StyledHamburgerHolder};
+export {StyledContainer, StyledHeader, StyledLogo, StyledMenu, StyledBlock, StyledHamburgerHolder};
