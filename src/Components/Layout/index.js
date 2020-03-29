@@ -32,8 +32,9 @@ function Layout({ children }) {
                     <Helmet>
                         <script src="https://kit.fontawesome.com/e58833834b.js" crossorigin="anonymous"></script>
                     </Helmet>
-                    <NavBar />
                     <Toggle theme={theme} toggleTheme={toggleTheme} />
+                    <NavBar />
+                    
                     <main>
                         {children}
                     </main>
