@@ -10,6 +10,7 @@ export const defaultTheme = {
 
 export const lightTheme = {
     body: '#fff',
+    angleBG: '#858585',
     text: '#000',
     textSmall: '12.5px',
     textMedium: '15px',
@@ -31,6 +32,7 @@ export const lightTheme = {
 
 export const darkTheme = {
     body: '#11162B',
+    angleBG: '#343749',
     text: '#fff',
     textSmall: '12.5px',
     textMedium: '15px',
