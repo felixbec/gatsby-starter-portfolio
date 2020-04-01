@@ -28,21 +28,21 @@
     npm start
     ```
 
-At this point you have the repository download with all the dependencies installed, but if you try to start by running `npm start` you are going to receive these messages in the console:
-```
-Unable to locate env file at location (.env.development)
-```
+    At this point you have the repository download with all the dependencies installed, but if you try to start by running `npm start` you are going to receive these messages in the console:
+    ```
+    Unable to locate env file at location (.env.development)
+    ```
 
-```
-Accessing your Contentful space failed.
-Try setting GATSBY_CONTENTFUL_OFFLINE=true to see if we can serve from cache.
+    ```
+    Accessing your Contentful space failed.
+    Try setting GATSBY_CONTENTFUL_OFFLINE=true to see if we can serve from cache.
 
-Endpoint not found. Check if host and spaceId settings are correct
-```
+    Endpoint not found. Check if host and spaceId settings are correct
+    ```
 
-Due to Contentful space not being setup, the portfolio will take the information. So the next step is create an empty space in [Contentful!](https://www.contentful.com/)
+    Due to Contentful space not being setup, the portfolio will take the information. So the next step is create an empty space in [Contentful!](https://www.contentful.com/)
 
-1.  **Configure Contentful.**
+3.  **Configure Contentful.**
 
     Navigate into your new site’s directory and you'll see a `.env.development.example` file. Replace the `CONTENTFUL_SPACE_ID` and `CONTENTFUL_ACCESS_TOKEN` and remove the `.example` from the file.
 
@@ -52,7 +52,7 @@ Due to Contentful space not being setup, the portfolio will take the information
 
     _Note: Gatsby Starter Portfolio requires an `.env.production` for production build. Make sure you create a copy of `.env.development` and rename to `.env.production`. This allows users to have a Development Contentful Space and a Production Contentful Space._
 
-2.  **Open the source code and start editing!**
+4.  **Open the source code and start editing!**
 
     Your site is now running at `https://localhost:3000`!
 
@@ -62,7 +62,7 @@ Due to Contentful space not being setup, the portfolio will take the information
 
 ## 🧐 What's inside?
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+    A quick look at the top-level files and directories you'll see in a Gatsby project.
 
     .
     ├── node_modules
