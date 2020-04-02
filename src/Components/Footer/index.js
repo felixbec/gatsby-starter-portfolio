@@ -1,9 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery  } from "gatsby"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { StyledFooter} from './Footer.styled';
-import signature from '../../images/sign.png';
+import logo from "../../images/navbar-logo.png"
 
 const Footer = (props) => {
     const data = useStaticQuery(
@@ -33,13 +31,12 @@ const Footer = (props) => {
             <div className="footer-topbar container">
                 <div className="row">
                     <div className="footer-topbar__col--left col-md-6">
-                        <img src={signature} alt="Signaure Logo" />
+                        <img src={logo} alt="Portfolio Logo" />
                     </div>
                     
                     <div className="footer-topbar__col--right col-md-6">
                         <ul>
-                        {/*
-                            {data.contentfulAbout.socialMedia.map(({ socialMedia }) => {
+                            {data.contentfulAbout.socialMedia.map(( socialMedia ) => {
                                 return (
                                     <li className="footer-topbar__item">
                                         <a href={`${socialMedia.url}`} target="_blank" rel="noopener noreferrer">
@@ -48,18 +45,6 @@ const Footer = (props) => {
                                     </li>
                                 )
                             })}
-                        */}
-
-                            <li className="footer-topbar__item">
-                                <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
-                                    <span className="col__social__icon"><FontAwesomeIcon icon={faTwitter}  color="#858585"/></span>
-                                </a>
-                            </li>
-                            <li className="footer-topbar__item">
-                                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                                    <span className="col__social__icon"><FontAwesomeIcon icon={faInstagram} color="#858585"/></span>
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -70,7 +55,6 @@ const Footer = (props) => {
                     <span>&copy; {getCurrentYear} {data.site.siteMetadata.title}. All Rights Reserved.</span>
                 </div>
             </div>
-
         </StyledFooter>
 
     )

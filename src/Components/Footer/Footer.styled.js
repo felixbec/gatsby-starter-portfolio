@@ -16,7 +16,7 @@ const StyledFooter = styled.footer`
         .col-md-6{padding: 0;}
         .footer-topbar__col--left{
             img{
-                height: 75px;
+                height: 30px;
                 margin: 0;
             }
         }
@@ -30,8 +30,8 @@ const StyledFooter = styled.footer`
                 .footer-topbar__item{
                     display: inline;
                     margin: .5rem;
-                    a span svg{
-                        
+                    a span i{
+                        color: #858585;
                         :hover{
                             color: ${({ theme }) => theme.textActive};
                             text-decoration: none;
