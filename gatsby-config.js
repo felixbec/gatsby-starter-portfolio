@@ -6,10 +6,10 @@
 
 module.exports = {
   siteMetadata: {
-    title: `All Things Dev`,
-    description: `Blog for all things related to Web Development`,
+    title: `Gatsby Starter Portfolio`,
+    description: `Gatsby starter integrated with Contentful CMS for Developer Portfolio. `,
     author: `Carlos Felix-Beltran`,
-    siteUrl: `https://all-things-dev.netlify.com/`,
+    siteUrl: `https://gatsby-starter-portfolio-cfb.netlify.com/`,
   },
   plugins: [
     {
@@ -40,15 +40,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "DevHub",
-        short_name: "DevHub",
+        name: "Gatsby Starter Portfolio",
+        short_name: "Gatsby Starter Portfolio",
         start_url: "/",
         background_color: "#fff",
         theme_color: "#000",
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: "standalone",
-        icon: "src/images/icon.png", // This path is relative to the root of the site.
+        icon: "static/favicon.ico", // This path is relative to the root of the site.
         // An optional attribute which provides support for CORS check.
         // If you do not provide a crossOrigin option, it will skip CORS for manifest.
         // Any invalid keyword or empty string defaults to `anonymous`
