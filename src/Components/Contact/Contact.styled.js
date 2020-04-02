@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledContact = styled.footer`
-    margin: 3rem 0;
+    margin: 3rem auto;
     h1 {
         color: ${({ theme }) => theme.textActive};
     }
