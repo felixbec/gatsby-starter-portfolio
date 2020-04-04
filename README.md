@@ -120,8 +120,4 @@
 
 12. **`README.md`**: A text file containing useful reference information about your project.
 
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/felixbec/gatsby-starter-portfolio)
-
 <!-- AUTO-GENERATED-CONTENT:END -->
