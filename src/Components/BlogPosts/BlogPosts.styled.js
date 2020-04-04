@@ -7,10 +7,10 @@ const StyledContainer = styled.div`
     h1, h2, h3, h4, h5, h6{
         color: ${({ theme }) => theme.textActive};
     }
-    p{color: ${({ theme }) => theme.accentText}; font-size: 1.5rem;}
+    p{color: ${({ theme }) => theme.accentText}; font-size: ${({ theme }) => theme.textLarge};}
     .post{
         @media (max-width:992px) and (min-width: 768px) {
-            &:last-child{
+            &:nth-child(3n){
                 display:none;
             }
         }
@@ -26,7 +26,7 @@ const StyledContainer = styled.div`
         }
         
         .post-slug{
-            background: #A7BFD3;
+            background: ${({ theme }) => theme.accentButton};
             transition: .15s ease-in-out all;
             padding: .5rem;
             text-align: center;
@@ -40,7 +40,7 @@ const StyledContainer = styled.div`
         }
         
         span{
-                font-size: ${({ theme }) => theme.textSmall};
+                font-size: ${({ theme }) => theme.textXSmall};
                 color: ${({ theme }) => theme.textDark};
             }
         a{
