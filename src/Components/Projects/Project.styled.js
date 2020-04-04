@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const StyledContainer = styled.div`
     margin: 5rem auto;
     h1{color: ${({ theme }) => theme.textActive};}
-    p{color: ${({ theme }) => theme.accentText}; font-size: 1.5rem;}
+    p{color: ${({ theme }) => theme.accentText}; font-size: ${({ theme }) => theme.textLarge};}
 
     /*@media (min-width: 768px) {
         .project-holder:nth-child(2n){

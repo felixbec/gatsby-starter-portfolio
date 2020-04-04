@@ -15,7 +15,7 @@ const StyledHeader = styled.header`
     flex-direction: row;
     justify-content: space-between;
     background: transparent;
-    font-size: 16px;
+    font-size: ${({ theme }) => theme.textSmall};
     font-weight: 600;
     height: 80px;
 `;
@@ -44,30 +44,7 @@ const StyledMenu = styled.div`
         }
     }
 `
-const StyledBlock = styled.div`
-    margin: auto 0;
-    margin-right: 50px;
-    display: none;
-    @media (min-width: ${({ theme }) => theme.desktop}) {
-        display: block;
-    }
-    a.btn{
-        margin-top: 0;
-        padding:.75rem 1.5rem;
-        background: transparent;
-        border: .5px solid ${({ theme }) => theme.border};
-        color: ${({ theme }) => theme.text};
-        border-radius: 20px;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 0;
-        &:hover{
-            background: ${({ theme }) => theme.textActive};
-            border: .5px solid ${({ theme }) => theme.textActive};
-            color: #fff;
-        }
-    }
-`
+
 const StyledHamburgerHolder = styled.div`
     display: none;
     align-items: center;
@@ -76,4 +53,4 @@ const StyledHamburgerHolder = styled.div`
     }
 `
 
-export {StyledContainer, StyledHeader, StyledLogo, StyledMenu, StyledBlock, StyledHamburgerHolder};
+export {StyledContainer, StyledHeader, StyledLogo, StyledMenu, StyledHamburgerHolder};

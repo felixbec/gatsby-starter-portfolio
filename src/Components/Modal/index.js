@@ -27,7 +27,7 @@ const Modal = (props) => {
         trigger={
             <StyledLinkable>
                 <span className="linkable__title">View Work</span>
-                <span><FontAwesomeIcon icon={faArrowAltCircleRight} color="#72D8FE" size="2x" /></span>
+                <span><FontAwesomeIcon icon={faArrowAltCircleRight} size="2x" /></span>
             </StyledLinkable> 
         }
         modal
@@ -44,7 +44,7 @@ const Modal = (props) => {
                     <p>{props.description}</p>
                     <div className="modal__content__links">
                         <a className="btn" target="_blank" rel="noopener noreferrer" href={props.link}><FontAwesomeIcon icon={faExternalLinkSquareAlt} />View Site</a>
-                        <a target="_blank" rel="noopener noreferrer" href={props.git}><FontAwesomeIcon icon={faGithub}  size="2x" color="#0EE6B8"/></a>
+                        <a className="icon" target="_blank" rel="noopener noreferrer" href={props.git}><FontAwesomeIcon icon={faGithub}  size="2x"/></a>
                     </div>
                 </div>
                 <div className="modal__carousel">
@@ -61,8 +61,8 @@ const Modal = (props) => {
                                 })}
                             </Slider>
                             <div className="modal__carousel__links">
-                                <ButtonBack><FontAwesomeIcon icon={faArrowAltCircleLeft} color="#72D8FE" size="2x" /></ButtonBack>
-                                <ButtonNext><FontAwesomeIcon icon={faArrowAltCircleRight} color="#72D8FE" size="2x" /></ButtonNext>
+                                <ButtonBack><FontAwesomeIcon icon={faArrowAltCircleLeft} size="2x" /></ButtonBack>
+                                <ButtonNext><FontAwesomeIcon icon={faArrowAltCircleRight} size="2x" /></ButtonNext>
                             </div>
                             <DotGroup />
                     </CarouselProvider>

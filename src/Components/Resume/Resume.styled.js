@@ -36,15 +36,15 @@ const StyledCard = styled.div`
 
     h3{
         color: ${({ theme }) => theme.textActive};
-        font-size: ${({ theme }) => theme.textXLarge};
+        font-size: ${({ theme }) => theme.textLarge};
     }
     p{
         color: ${({ theme }) => theme.accentText};
-        font-size: ${({ theme }) => theme.textMedium};
+        font-size: ${({ theme }) => theme.textSmall};
     }
     span{
         color: ${({ theme }) => theme.text};
-        font-size: ${({ theme }) => theme.textSmall};
+        font-size: ${({ theme }) => theme.textXSmall};
     }
 `
 

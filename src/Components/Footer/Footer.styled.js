@@ -31,7 +31,7 @@ const StyledFooter = styled.footer`
                     display: inline;
                     margin: .5rem;
                     a span i{
-                        color: #858585;
+                        color: ${({ theme }) => theme.textDark};
                         :hover{
                             color: ${({ theme }) => theme.textActive};
                             text-decoration: none;
@@ -51,7 +51,7 @@ const StyledFooter = styled.footer`
         justify-content: flex-end;
         .footer-bottombar__copyright{
             text-align: right;
-            font-size: ${({ theme }) => theme.textSmall};
+            font-size: ${({ theme }) => theme.textXSmall};
             color: ${({ theme }) => theme.textDark};
 
             @media (max-width: 992px){

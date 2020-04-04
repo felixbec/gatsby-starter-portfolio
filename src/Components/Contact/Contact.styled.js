@@ -30,7 +30,7 @@ const StyledContact = styled.footer`
             list-style:none;
             li{
                 a{
-                    color: #A7BFD3;
+                    color: ${({ theme }) => theme.accentButton};
                     .col__social__username{
                         margin-left: 1rem;
                     }
@@ -71,17 +71,17 @@ const StyledContact = styled.footer`
                 margin: 10px 0;
                 border:none;
                 border-bottom: 1px solid ${({ theme }) => theme.border};
-                color: #A7BFD3;
+                color: ${({ theme }) => theme.accentButton};
                 min-width:300px;
 
                 &::placeholder {
-                    color: #A7BFD3;
+                    color: ${({ theme }) => theme.accentButton};
                     opacity: 1;
                 }
             }
             button{
                 background: transparent;
-                color: #A7BFD3;
+                color: ${({ theme }) => theme.accentButton};
                 border-color: ${({ theme }) => theme.border};
                 border-radius: 50px;
                 margin-top:10px;
@@ -98,7 +98,7 @@ const StyledContact = styled.footer`
         display: flex;
         justify-content: space-between;
         margin: 1rem 0;
-        border-top: 1px solid #A7BFD3;
+        border-top: 1px solid ${({ theme }) => theme.accentButton};
         .contact-bottombar__linkables{
             ul{
                 margin: 0;

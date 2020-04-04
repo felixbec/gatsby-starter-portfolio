@@ -16,7 +16,7 @@ const StyledImage = styled.img`
 `
 const StyledAuthorInfo = styled.div`
     h1{
-        font-size: 80px;
+        font-size: ${({ theme }) => theme.textXXLarge};
     }
     span{
         margin-top: 1rem;

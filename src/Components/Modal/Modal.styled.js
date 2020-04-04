@@ -35,18 +35,24 @@ const StyledPopup = styled(Popup)`
                     background: ${({ theme }) => theme.textActive};
                 }
                 p{
-                    font-size: ${({ theme }) => theme.textMedium};
+                    font-size: ${({ theme }) => theme.textSmall};
                     color: ${({ theme }) => theme.textDark};
                 }
                 .modal__content__links{
                     flex-direction: row;
                     justify-content:space-between;
 
-                    a.btn{
-                        background: ${({ theme }) => theme.textActive};
-                        svg{
-                            padding-right: 5px;
+                    a{
+                        &.btn{
+                            background: ${({ theme }) => theme.textActive};
+                            svg{
+                                padding-right: 5px;
+                            }
                         }
+                        &.icon{
+                            svg{ color: ${({ theme }) => theme.textActive};}
+                        }
+
                     }
                 }
             }
@@ -60,6 +66,7 @@ const StyledPopup = styled(Popup)`
                     button{
                         background: transparent;
                         border: none;
+                        svg{ color: ${({ theme }) => theme.accentText};}
                     }
                 }
                 .carousel__dot-group{
@@ -79,6 +86,9 @@ const StyledPopup = styled(Popup)`
 
 const StyledLinkable = styled.a`
     color: ${({ theme }) => theme.text};
+    span svg{
+            color: ${({ theme }) => theme.accentText};
+        }
     :hover{
         text-decoration: none; 
         color: ${({ theme }) => theme.text};

@@ -9,8 +9,8 @@ const Toggle = ({ theme, toggleTheme }) => {
     return (
         <StyledContainer>
             <ToggleContainer lightTheme={isLight} onClick={toggleTheme} >
-                <FontAwesomeIcon icon={faMoon} color="#0EE6B8"/>
-                <FontAwesomeIcon icon={faSun} color="#A7BFD3"/>
+                <FontAwesomeIcon icon={faMoon} />
+                <FontAwesomeIcon icon={faSun} />
             </ToggleContainer>
         </StyledContainer>
     );

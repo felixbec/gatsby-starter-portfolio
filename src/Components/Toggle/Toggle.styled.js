@@ -26,7 +26,10 @@ const ToggleContainer = styled.button`
         margin: auto;
         width: 2.5rem;
         transition: all 0.3s linear;
-        
+
+        &.fa-moon{ color: ${({ theme }) => theme.textActive};}
+        &.fa-sun{ color: ${({ theme }) => theme.accentButton};}
+
         // sun icon
         &:first-child {
         transform: ${({ lightTheme }) => lightTheme ? 'translateX(0)' : 'translateX(100px)'};
