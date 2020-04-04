@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  <a href="https://gatsby-starter-portfolio-cfb.netlify.com/">
+    <img alt="Gatsby Starter Portfolio" src="./src/images/navbar-logo.png" width="80" />
   </a>
 </p>
 <h1 align="center">
