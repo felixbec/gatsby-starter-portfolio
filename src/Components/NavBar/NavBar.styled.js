@@ -23,7 +23,7 @@ const StyledHeader = styled.header`
 const StyledLogo = styled.div`
     display: flex;
     align-items: center;
-    img{height: 30px; margin: 0;}
+    img{height: 50px; margin: 0;}
 
 `
 const StyledMenu = styled.div`
@@ -71,7 +71,6 @@ const StyledBlock = styled.div`
 const StyledHamburgerHolder = styled.div`
     display: none;
     align-items: center;
-    margin-right: 50px;
     @media (max-width: ${({ theme }) => theme.desktop}) {
         display: flex;
     }

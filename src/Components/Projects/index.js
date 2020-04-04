@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery  } from "gatsby"
 import { StyledContainer, StyledProject, StyledImage, StyledImageAlt, StyledContent, StyledContentAlt } from './Project.styled'
+import SiteConfigs from '../../SiteConfig';
 import SlideAnimation from 'react-reveal/Slide';
 
 
@@ -39,8 +40,8 @@ const Projects = (props) => {
     
     return (
         <StyledContainer id="projects" className="container">
-            <h1>#Lastest Work</h1>
-            <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <h1>{SiteConfigs.Projects_title}</h1>
+            <p>{SiteConfigs.Projects_description}</p>
             <SlideAnimation bottom>
             {data.allContentfulProject.edges.map(({ node }) => {
                 counter++;

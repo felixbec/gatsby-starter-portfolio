@@ -7,6 +7,7 @@ const StyledContainer = styled.div`
     h1, h2, h3, h4, h5, h6{
         color: ${({ theme }) => theme.textActive};
     }
+    p{color: ${({ theme }) => theme.accentText}; font-size: 1.5rem;}
     .post{
         @media (max-width:992px) and (min-width: 768px) {
             &:last-child{

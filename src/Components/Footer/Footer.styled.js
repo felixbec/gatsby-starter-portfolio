@@ -16,7 +16,7 @@ const StyledFooter = styled.footer`
         .col-md-6{padding: 0;}
         .footer-topbar__col--left{
             img{
-                height: 30px;
+                height: 50px;
                 margin: 0;
             }
         }

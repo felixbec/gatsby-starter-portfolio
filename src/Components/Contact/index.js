@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery  } from "gatsby"
 import { StyledContact} from './Contact.styled'
+import SiteConfigs from '../../SiteConfig';
 
 const Contact = (props) => {
     const data = useStaticQuery(
@@ -50,7 +51,7 @@ const Contact = (props) => {
 
                 <div className="contact-topbar__col--right col-md-6">
                     <div>
-                        <h3>Start a project?</h3>
+                        <h3>{SiteConfigs.Contact_form_title}</h3>
                         <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify={true}>
                             <label htmlFor="name">Name:</label> <input type="text" name="name" placeholder="Name" /> 
                             <label htmlFor="email">Email:</label> <input type="email" name="email" placeholder="Email" />

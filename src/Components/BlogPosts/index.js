@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import {StyledContainer, StyledImage} from "./BlogPosts.styled"
+import SiteConfigs from '../../SiteConfig';
 import Fade from 'react-reveal/Fade';
 
 const BlogPosts = ( props ) => {
@@ -30,8 +31,8 @@ const BlogPosts = ( props ) => {
     return (
         <StyledContainer id="blog" className="container">
             <div>
-                <h1>#Recent Articles</h1>
-                <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <h1>{SiteConfigs.BlogPosts_title}</h1>
+                <p>{SiteConfigs.BlogPosts_description}</p>
                     <div className="row">
                         {data.allContentfulBlogPost.edges.map(({node}) => (
                             <Fade bottom key={node.id}>

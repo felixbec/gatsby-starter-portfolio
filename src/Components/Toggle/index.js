@@ -1,6 +1,5 @@
 import React from 'react'
 import { func, string } from 'prop-types';
-// Import a couple of SVG files we'll use in the design: https://www.flaticon.com
 import { StyledContainer, ToggleContainer } from './Toggle.styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
