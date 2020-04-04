@@ -44,11 +44,20 @@
 
 3.  **Configure Contentful.**
 
-    Navigate into your new site’s directory and you'll see a `.env.development.example` file. Replace the `CONTENTFUL_SPACE_ID` and `CONTENTFUL_ACCESS_TOKEN` and remove the `.example` from the file.
-
+    Begin by creating an empty space in [Contentful](https://www.contentful.com/), then run the following command `npm run setup`. The CLI popup will request the following values:
+    
     ```shell
-    npm start
+        Space ID
+        Content Delivery API Access Token
+        Content Management Person Access Token
     ```
+    _Note: This is required in order to import the demo's Content Model and placeholder data._
+
+    Upon successful import, you should receive a message in the terminal: 
+    The import was successful.
+    All set! You can now run `npm start` to see it in action.
+    
+    _Note: The `npm run setup` script will generate a `env.development` file with the provided API Access Tokens._
 
     _Note: Gatsby Starter Portfolio requires an `.env.production` for production build. Make sure you create a copy of `.env.development` and rename to `.env.production`. This allows users to have a Development Contentful Space and a Production Contentful Space._
 
@@ -59,6 +68,15 @@
     _Note: You'll also see a second link: _`https://localhost:3000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
     Open the `gatsby-starter-portfolio` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+
+## 🤘 Theming
+
+    Now the fun part! With this starter, the colors are customizeable. 
+
+    Inside the `src/Theme.js`, there are 2 themes, Light Mode and Dark Mode. 
+    All the colors and font size in the starter are driven from this file.
+
+    `src/SiteConfig.js` - Allows you to change the content that is not configured in [Contentful](https://www.contentful.com/).
 
 ## 🧐 What's inside?
 
