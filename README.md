@@ -21,10 +21,11 @@
 
 2.  **Before starting to develop.**
 
-    Navigate into your new site’s directory and start it up.
+    Navigate into your new site’s directory, install dependencies and start it up.
 
     ```shell
     cd gatsby-starter-portfolio/
+    npm install
     npm start
     ```
 
